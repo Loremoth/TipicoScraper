@@ -5,15 +5,18 @@ from scrapy_splash import SplashRequest
 
 script = """
 function main(splash)
+splash.resource_timeout=360
 splash:go('https://www.tipico.com/it/scommesse-sportive-online/calcio/italia/serie-a/g33301/')
 local result, error = splash:wait_for_resume([[
         function main(splash) {
             var links = document.getElementsByClassName("t_more");
   					for (i = 0; i < links.length; i++) {
                 links[i].click();
+                links[i].click();
 }
-  
+  splash.resume();
         }
+        
     ]])
     return splash:jpeg{
        render_all=true
