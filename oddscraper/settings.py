@@ -94,3 +94,4 @@ DOWNLOADER_MIDDLEWARES = {
 SPLASH_URL = 'http://192.168.99.100:8050'
 DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
 HTTPCACHE_STORAGE = 'scrapy_splash.SplashAwareFSCacheStorage'
+
